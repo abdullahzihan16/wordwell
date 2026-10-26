@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f6f2" />
+    <title>Wordwell — English to Bangla Dictionary</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="dictionary-data.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Wordwell home">
+          <span class="brand-mark" aria-hidden="true">W</span>
+          <span>wordwell<span class="brand-period">.</span></span>
+        </a>
+        <section class="welcome" aria-labelledby="page-title">
+          <p class="eyebrow">YOUR GRE WORD COMPANION</p>
+          <h1 id="page-title">Find the <em>right</em> word.</h1>
+          <p id="save-status" class="topbar-note" aria-live="polite">Reading progress saves on this device</p>
+        </section>
+      </header>
+
+      <main class="workspace">
+        <section class="dictionary" aria-label="Dictionary">
+          <aside class="word-panel" aria-label="Word list">
+            <label class="search-box" for="search-input">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="10.8" cy="10.8" r="6.8"></circle>
+                <path d="m16 16 4.5 4.5"></path>
+              </svg>
+              <input id="search-input" type="search" placeholder="Search words or meanings…" autocomplete="off" />
+              <kbd>/</kbd>
+            </label>
+            <div class="list-heading">
+              <span>WORD LIST</span>
+              <span id="word-count" class="word-count" aria-live="polite">Loading…</span>
+            </div>
+            <div id="word-list" class="word-list" role="listbox" aria-label="Words"></div>
+          </aside>
+
+          <article id="entry-panel" class="entry-panel" aria-live="polite" aria-busy="true">
+            <div class="loading-state">
+              <span class="loader" aria-hidden="true"></span>
+              <p>Opening the word book…</p>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Made for curious minds.</span>
+        <span>English <span aria-hidden="true">↔</span> বাংলা</span>
+      </footer>
+    </div>
+  </body>
+</html>
